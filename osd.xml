@@ -371,8 +371,10 @@
             <area>130,560,113,80</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <cutdown>no</cutdown>
+            <cutdown>yes</cutdown>
+<!--
             <scroll direction="vertical" rate="10"/>
+-->
             <font>text</font>
         </textarea>
 <!--

@@ -27,7 +27,11 @@
     <fontdef name="menu_description" from="normal">
         <color>#CCCCCC</color>
     </fontdef>
-
+    
+    <fontdef name="descrip" from="normal">
+        <pixelsize>20</pixelsize>
+        <weight>bold</weight>
+    </fontdef>
 
     <!-- Font for the title descriptions that
         is visible on most of the screens -->
@@ -863,19 +867,21 @@
          in the top left corner of each screen -->
     <textarea name="base_heading">
         <imagetype name="header_background">
-            <area>-1,-1,560,50</area>
+            <area>-1,-1,200,50</area>
             <filename>images/media/header_left.png</filename>
         </imagetype>
+        <!--
         <clock name="clock">
             <area>10,0,230,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
             <align>left,vcenter</align>
         </clock>
+        -->
         <textarea name="text" from="base_textarea">
-            <area>245,0,270,30</area>
-            <align>allcenter</align>
-            <scroll direction="horizontal" rate="35"/>
+            <area>5,0,175,30</area>
+            <align>left,vcenter</align>
+            <scroll direction="horizontal" />
         </textarea>
     </textarea>
 
@@ -919,8 +925,7 @@
         </scrollbar>
     </webbrowser>
 
-    
-    
+
     <!-- ===================================================== -->
     <!-- Below are the definitions of popup dialogs that are 
          based on the base conponents are specified here -->
@@ -979,21 +984,18 @@
                 <state name="active">
                     <textarea name="buttontext">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" rate="35"/>
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedinactive">
                     <textarea name="buttontext">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" rate="35"/>
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedactive">
                     <textarea name="buttontext">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" rate="35"/>
                         <align>allcenter</align>
                     </textarea>
                 </state>
@@ -1055,21 +1057,18 @@
                 <state name="active">
                     <textarea name="buttontext">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" rate="35"/>
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedinactive">
                     <textarea name="buttontext">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" rate="35"/>
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedactive">
                     <textarea name="buttontext">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" rate="35"/>
                         <align>allcenter</align>
                     </textarea>
                 </state>
@@ -1728,77 +1727,44 @@
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>300,130,680,388</area>
+            <area>350,130,580,388</area>
         </shape>
 
         <textarea name="title" from="base_textarea">
-            <area>315,140,650,60</area>
+            <area>365,140,550,60</area>
             <value>Metadata Search Results</value>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical" rate="10"/>
+            <scroll direction="vertical"/>
         </textarea>
         <shape name="title_separator" from="base_background_shape">
-            <area>301,210,678,1</area>
+            <area>351,210,578,1</area>
         </shape>
 
         <buttonlist name="results" from="base_buttonlist">
-            <area>315,225,650,275</area>
-            <arrange>stack</arrange> 
+            <area>365,225,550,275</area>
             <statetype name="buttonitem">
                 <state name="active">
-                    <area>0,0,650,36</area>
+                    <area>0,0,550,36</area>
                     <textarea name="buttontext" from="base_textarea">
-                        <area>8,0,450,36</area>
-                        <scroll direction="horizontal" rate="35"/>
+                        <area>8,0,350,36</area>
+                        <scroll direction="horizontal"/>
                     </textarea>
-
+                    
                     <textarea name="year" from="base_textarea">
-                        <area>465,0,170,36</area>
+                        <area>365,0,170,36</area>
                         <align>right,vcenter</align>
                         <template>Released %1</template>
-                        <scroll direction="horizontal" rate="35"/>
+                        <scroll direction="horizontal"/>
                     </textarea>
                 </state>
                 <state name="inactive" from="active" />
                 <state name="selectedactive" from="active">
-                    <area>0,0,650,110</area>
+                    <area>0,0,550,36</area>
                     <shape name="background" from="base_button_shape_selectedactive"/>
-
-                    <imagetype name="buttonimage">
-                        <area>10,10,60,90</area>
-                        <mask>images/media/movie_cover_mask.png</mask>
-                        <preserveaspect>true</preserveaspect>
-                    </imagetype>
-                    <imagetype name="buttonimage_border">
-                        <area>10,10,60,90</area>
-                        <filename>images/media/movie_cover_border.png</filename>
-                        <preserveaspect>true</preserveaspect>
-                    </imagetype>
-
-                    <textarea name="buttontext" from="base_textarea">
-                        <area>78,0,370,36</area>
-                        <scroll direction="horizontal" rate="35"/>
-                    </textarea>
-
-                    <textarea name="year" from="base_textarea">
-                        <area>465,0,170,36</area>
-                        <align>right,vcenter</align>
-                        <template>Released %1</template>
-                        <scroll direction="horizontal" rate="35"/>
-                    </textarea>
-
-                    <textarea name="description" from="base_textarea">
-                        <area>78,35,564,65</area>
-                        <align>left,top</align>
-                        <multiline>yes</multiline>
-                        <template>%DESCRIPTION%</template>
-                        <scroll direction="vertical" rate="35"/>
-                    </textarea>
-
                 </state>
                 <state name="selectedinactive" from="active">
-                    <area>0,0,650,36</area>
+                    <area>0,0,550,36</area>
                     <shape name="background" from="base_button_shape_selectedinactive"/>
                 </state>
             </statetype>
@@ -1875,6 +1841,7 @@
                     <shape name="resolution_background" from="base_background_shape_dark">
                         <area>3,158,130,32</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
+                        <cornerradius>8</cornerradius>
                     </shape>
                     <textarea name="resolution" from="base_textarea">
                         <area>15,155,103,36</area>
@@ -1910,6 +1877,7 @@
                     <shape name="resolution_background" from="base_background_shape_dark">
                         <area>7,225,180,37</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
+                        <cornerradius>8</cornerradius>
                     </shape>
                     <textarea name="resolution" from="base_textarea">
                         <area>10,225,165,36</area>
