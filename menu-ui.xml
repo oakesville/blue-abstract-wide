@@ -2,264 +2,9 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
     <window name="mainmenu">  
-
-        <imagetype name="header_background">
-            <area>-290,-1,560,50</area>
-            <filename>images/media/header_left.png</filename>
-        </imagetype>
-        <clock name="clock">
-            <area>10,0,230,30</area>
-            <font>text</font>
-            <template>%DATE%, %TIME%</template>
-            <align>left,vcenter</align>
-        </clock>
-
-        <!-- Shows different background images for different menus 
-             Only the main menu entries have extra backgrounds. -->
-        <statetype name="watermarks">
-            <position>0,0</position>
-        
-            <!-- Background images for the main menu -->
-            <state name="MENU_TV">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/livetv.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="MENU_VIDEOS">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/videos.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="MENU_MUSIC">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/music.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="MENU_IMAGES">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/pictures.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="MENU_GAMES">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/games.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="MENU_INFO_CENTER">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/scripts.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="MENU_EXTRAS">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/custom.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            
-            <!-- Background images for the TV menu -->
-            <state name="TV_WATCH_TV">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/livetv.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="TV_PROGRAM_GUIDE">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/tvguide.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <!-- TODO change image -->
-            <state name="TV_MENU_ORGANIZE">
-                <imagetype name="watermark">
-                    <filename>images/watermarks/scripts.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <!-- TODO change image -->
-            <state name="TV_WATCH_RECORDINGS">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/tvshow.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            
-            <!-- Background images for the Video menu -->
-            <state name="VIDEO_BROWSER">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/videos.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <!-- TODO change image -->
-            <state name="TV_WATCH_RECORDINGS">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/tvshow.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="DVD_PLAY">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/playdisc.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <!-- TODO change image -->
-            <state name="NET_VIDEO_SEARCH">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/favourite.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <!-- TODO change image -->
-            <state name="NET_VIDEO_TREE">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/favourite.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <!-- Background images for the Music menu -->
-            <state name="MUSIC_PLAY">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/music.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <!-- TODO change image -->
-            <state name="STREAM_PLAY">
-                <imagetype name="watermark">
-                    <filename>images/watermarks/scripts.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="MUSIC_PLAYLIST">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/defaultfanart.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <!-- TODO change image -->
-            <state name="MUSIC_SCAN">
-                <imagetype name="watermark">
-                    <filename>images/watermarks/custom.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            
-            <!-- Background images for the information menu -->
-            <!-- TODO change image -->
-            <state name="WEBPAGE">
-                <imagetype name="watermark">
-                    <filename>images/watermarks/scripts.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <!-- TODO change image -->
-            <state name="NEWS">
-                <imagetype name="watermark">
-                    <filename>images/watermarks/scripts.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <!-- TODO change image -->
-            <state name="WEATHER">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/weatherplus.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            
-            <!-- Background images for the extras menu -->
-            <state name="DVD_RIP">
-                <imagetype name="watermark">
-                    <filename>images/watermarks/custom.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="MUSIC_RIP">
-                <imagetype name="watermark">
-                    <filename>images/watermarks/custom.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="ARCHIVE">
-                <imagetype name="watermark">
-                    <filename>images/watermarks/custom.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="TV_STATUS">
-                <imagetype name="watermark">
-                    <filename>images/watermarks/custom.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="MENU_UTILITIES_SETUP">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/custom.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-
-            <!-- The following states are not part of the blue-abstract menu
-                 and have only been added for consistency with other menus -->
-            <state name="MENU_MANAGE_RECORDINGS">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/videos.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="MENU_OPTICAL_DISKS">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermarks/playdisc.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="MENU_PLUGINS">
-                <imagetype name="watermark">
-                    <filename>images/watermarks/custom.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-            <state name="MENU_ADVANCED">
-                <imagetype name="watermark">
-                    <filename>images/watermarks/custom.jpg</filename>
-                    <area>0,0,1280,720</area>
-                </imagetype>
-            </state>
-        </statetype>
-
         <!-- The structure of the menu. This is a vertical list -->
         <buttonlist name="menu">
-            <area>160,125,450,520</area>
+            <area>160,100,450,520</area>
             <layout>vertical</layout>
             <spacing>10</spacing>
             <wrapstyle>items</wrapstyle>
@@ -270,12 +15,12 @@
             <statetype name="buttonitem">
                 <!-- General settings for the menu entry -->
                 <state name="active">
-                    <area>0,0,550,56</area>
+                    <area>0,0,450,56</area>
                     <imagetype name="background">
                         <filename />
                     </imagetype>
                     <textarea name="buttontext">
-                        <area>8,0,520,40</area>
+                        <area>8,0,420,40</area>
                         <font>menu</font>
                         <align>left,vcenter</align>
                         <cutdown>yes</cutdown>
@@ -289,7 +34,7 @@
                         <alpha>200</alpha>
                     </imagetype>
                     <textarea name="description">
-                        <area>8,35,520,21</area>
+                        <area>8,35,420,21</area>
                         <font>menu_description</font>
                         <align>left,vcenter</align>
                         <cutdown>yes</cutdown>

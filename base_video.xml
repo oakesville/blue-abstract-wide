@@ -5,7 +5,7 @@
 
     <!-- Shows a large version of the video cover with the rating below it -->
     <group name="base_video_large_cover_group">
-
+    
         <imagetype name="coverart_background_image">
             <area>20,20,245,355</area>
             <mask>images/media/movie_cover_mask.png</mask>
@@ -289,10 +289,11 @@
                         <filename>images/media/movie_bg.png</filename>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
-
+                    <!--
                     <textarea name="buttontext" from="base_textarea">
                         <area>15,15,100,20</area>
                     </textarea>
+                    -->
                     
                     <!-- this is the actual cover image that will be shown if its
                         available, otherwise only the background image is visible -->
@@ -303,6 +304,7 @@
                     </imagetype>
 
                     <!-- marks the video as watched -->
+                    <!--
                     <statetype name="watchedstate">
                         <position>79,4</position>
                         <state name="yes">
@@ -318,7 +320,7 @@
                             </imagetype>
                         </state>
                     </statetype>
-                    
+                    --> 
                     <!-- the node is a folder and it is currently not selected -->
                     <statetype name="nodetype">
                         <position>0,0</position>
@@ -363,10 +365,11 @@
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
 
+                    <!--
                     <textarea name="buttontext" from="base_textarea">
                         <area>20,20,150,20</area>
                     </textarea>
-                    
+                    --> 
                     <!-- this is the actual cover image that will be shown if its
                         available, otherwise only the background image is visible -->
                     <imagetype name="buttonimage">
@@ -376,6 +379,7 @@
                     </imagetype>
 
                     <!-- marks the video as watched -->
+                    <!--
                     <statetype name="watchedstate">
                         <position>111,9</position>
                         <state name="yes">
@@ -391,7 +395,7 @@
                             </imagetype>
                         </state>
                     </statetype>
-
+                    -->
                     <!-- the node is a folder and it is currently selected -->
                     <statetype name="nodetype">
                         <position>0,0</position>
